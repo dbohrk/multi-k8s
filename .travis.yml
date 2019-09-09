@@ -10,13 +10,13 @@ script:
 
 after_success:
   - docker build -t dbohrk/multi-client ./client
-  - docker build -t dbohrk/multi-ngnix ./ngnix
+  - docker build -t dbohrk/multi-nginx ./nginx
   - docker build -t dbohrk/multi-server ./server
   - docker build -t dbohrk/multi-worker ./worker
   # Log into the Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take images and push to Docker Hub
   - docker push dbohrk/multi-client
-  - docker push dbohrk/multi-ngnix
+  - docker push dbohrk/multi-nginx
   - docker push dbohrk/multi-server
   - docker push dbohrk/multi-worker
