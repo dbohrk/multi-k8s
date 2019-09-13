@@ -16,4 +16,4 @@ spec:
         - name: client
           image: dbohrk/multi-client
           ports:
-            - containerPorts: 3000
+            - containerPort: 3000
