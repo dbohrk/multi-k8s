@@ -18,7 +18,7 @@ before_install:
   - docker build -t dbohrk/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true dbohrk/docker-react npm run test # Example of tests, not reqired for project
+  - docker run -e CI=true dbohrk/react-test npm run test # Example of tests, not reqired for project
 
 deploy:
   provider: script
